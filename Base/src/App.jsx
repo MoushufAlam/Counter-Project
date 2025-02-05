@@ -1,19 +1,20 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-
-  let [counter , setCounter] = useState(0);
+  let [counter, setCounter] = useState(0);
 
   const addValue = () => {
-    counter ++;
-    setCounter(counter);
-  }
-  const removeValue = () => {
-    counter --;
-    setCounter(counter);
-  }
 
+    if (counter < 20) counter++;
+    setCounter(counter);
+  
+  };
+  
+  const removeValue = () => {
+    counter--;
+    setCounter(counter);
+  };
 
   return (
     <>
@@ -24,7 +25,7 @@ function App() {
       <br />
       <button onClick={removeValue}>Decrease Value</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
